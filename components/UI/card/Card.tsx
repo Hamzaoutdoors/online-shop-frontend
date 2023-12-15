@@ -24,7 +24,7 @@ const Card: React.FC<Props> = ({ product }) => {
                 width={150}
                 height={150}
                 alt={product.name}
-                className=" drop-shadow-xl object-contain hover:scale-110 transition-transform duration-300 ease-in-out !py-2 "
+                className="drop-shadow-xl object-contain hover:scale-110 transition-transform duration-300 ease-in-out !py-2 "
               />
             </div>
             {product?.discount ? (
@@ -47,7 +47,7 @@ const Card: React.FC<Props> = ({ product }) => {
                   value={product.starRating}
                 />
               </div>
-              <p className="text-sm font-extralight sm:text-[0.75rem] md:text-sm text-start text-palette-mute line-clamp-2">
+              <p className="text-sm font-extralight sm:text-[0.75rem] text-start text-palette-mute line-clamp-2">
                 Brand:{product.brand}
               </p>
               <h3 className="text-sm sm:text-[1.5rem] md:text-base text-start text-black md:my-1">

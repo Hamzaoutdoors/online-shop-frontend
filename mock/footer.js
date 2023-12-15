@@ -3,22 +3,22 @@ import { AiFillInstagram } from "react-icons/ai";
 
 export const footerContent = [
   {
-    title: "zishopMap",
+    title: "eShop",
     subtitles: [
       {
-        text: "aboutUs",
+        text: "about",
         href: "/about",
       },
       {
-        text: "contactUs",
+        text: "contact",
+        href: "/contact",
+      },
+      {
+        text: "saleInEshop",
         href: "/blank",
       },
       {
-        text: "saleInZishop",
-        href: "/blank",
-      },
-      {
-        text: "careerOpportunities",
+        text: "ourBrands",
         href: "/blank",
       },
     ],

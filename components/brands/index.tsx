@@ -38,8 +38,7 @@ const Brands = () => {
     ],
   };
   return (
-    <div className="p-1 my-4 md:my-8 text-center">
-      {/*       <SectionTitle title={"popularBrands"} />*/}{" "}
+    <div className="md:p-1 my-2 mx-2 md:mx-0">
       <Slider {...settings}>
         {brandContent.map((brandItem) => {
           return (

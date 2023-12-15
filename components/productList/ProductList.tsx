@@ -48,7 +48,7 @@ const ProductList: React.FC<Props> = ({ productList }) => {
           <div className="grid gap-4 md:gap-2 grid-cols-6 md:grid-cols-12">
             {productList
               ? productList.map((product: IProduct) => {
-                  return <Card key={product.slug.current} product={product} />;
+                  return <Card key={product.name} product={product} />;
                 })
               : null}
           </div>
@@ -60,7 +60,7 @@ const ProductList: React.FC<Props> = ({ productList }) => {
             />
             <div className="grid gap-4 md:gap-2 grid-cols-6 md:grid-cols-12">
               {sortedProductList.map((product: IProduct) => {
-                return <Card key={product.slug.current} product={product} />;
+                return <Card key={product.name} product={product} />;
               })}
             </div>
           </div>

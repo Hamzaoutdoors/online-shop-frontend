@@ -30,7 +30,6 @@ const CarouselBox: React.FC<Props> = ({
     slidesToScroll: 5,
     // initialSlide: 0,
     swipeToSlide: true,
-    // rtl: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [

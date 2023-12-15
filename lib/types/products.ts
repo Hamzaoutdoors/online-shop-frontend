@@ -21,10 +21,10 @@ export interface IProductDetails {
   sound_isolating?: boolean;
 }
 
-export type TSlug = {
+/* export type TSlug = {
   _type: string;
   current: string;
-};
+}; */
 
 export type TImage = {
   _key: string;
@@ -39,7 +39,6 @@ export interface IProduct {
   image: any;
   name: string;
   description: string;
-  slug?: TSlug;
   price: number;
   discount?: number;
   details?: IProductDetails[];

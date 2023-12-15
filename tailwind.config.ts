@@ -44,6 +44,7 @@ module.exports = {
           houseCategory: "var(--house-category-bgc)",
           toyCategory: "var(--toy-category-bgc)",
           stationeryCategory: "var(--stationery-category-bgc)",
+          footerBgColor: "var(--footer-bgc)",
         },
       },
       fontFamily: {

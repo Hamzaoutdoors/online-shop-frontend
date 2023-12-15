@@ -26,14 +26,13 @@ const ProductPrice: React.FC<Props> = ({
   //style base on component position
   const textMainPriceSize = isLargeSize
     ? "text-xl md:text-3xl"
-    : "text-md md:text-lg";
+    : "text-sm md:text-md";
   const textDiscountPriceSize = isLargeSize
     ? "text-md md:text-xl"
-    : "text-[11px] md:text-md";
-  const justifyContent = isInSlider && locale === "fr" ? "flex-end" : "";
+    : "text-[6px] md:text-sm";
 
   return (
-    <div className="flex md:justify-end" style={{ justifyContent }}>
+    <div className="flex justify-end">
       {discount ? (
         <div className="flex flex-row">
           <div className="flex items-center">

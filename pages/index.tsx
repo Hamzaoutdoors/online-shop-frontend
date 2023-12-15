@@ -8,7 +8,7 @@ const Newest = dynamic(() => import("../components/newest/Newest"));
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-4 md:px-2 items-center">
       <Carousel />
       <Brands />
       <Newest />
