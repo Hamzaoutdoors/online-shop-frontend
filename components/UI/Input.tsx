@@ -43,7 +43,7 @@ const Input = React.forwardRef<IImperativeHandler, Props>((props, ref) => {
   return (
     <div className="relative mb-8">
       <label
-        className="absolute -top-[30%] ltr:left-3 rtl:right-3 bg-palette-card p-[0.3rem] whitespace-nowrap"
+        className="absolute -top-[30%] left-3 bg-palette-card p-[0.3rem] whitespace-nowrap"
         htmlFor={props.id}
       >
         {props.required ? (

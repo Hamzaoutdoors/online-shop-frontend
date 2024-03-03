@@ -7,7 +7,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 const SearchBar = () => {
   const { t } = useLanguage();
   return (
-    <div className="max-w-[50rem] w-full md:w-[90%] px-4 md:ltr:ml-4 md:mr-4 rounded-lg bg-slate-600/10 dark:bg-slate-800 flex items-center flex-grow">
+    <div className="max-w-[50rem] w-full md:w-[90%] px-4 md:ml-4 md:mr-4 rounded-lg border-gray-400 border-[1px] bg-slate-800 flex items-center flex-grow">
       <input
         className="px-4 py-2 md:py-3 bg-transparent outline-none w-full "
         type="search"

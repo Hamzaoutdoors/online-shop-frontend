@@ -26,14 +26,13 @@ const ProductPrice: React.FC<Props> = ({
   //style base on component position
   const textMainPriceSize = isLargeSize
     ? "text-xl md:text-3xl"
-    : "text-md md:text-lg";
+    : "text-sm md:text-md";
   const textDiscountPriceSize = isLargeSize
     ? "text-md md:text-xl"
-    : "text-[11px] md:text-md";
-  const justifyContent = isInSlider && locale === "fr" ? "flex-end" : "";
+    : "text-[6px] md:text-sm";
 
   return (
-    <div className="flex md:justify-end" style={{ justifyContent }}>
+    <div className="flex justify-end">
       {discount ? (
         <div className="flex flex-row">
           <div className="flex items-center">
@@ -46,14 +45,14 @@ const ProductPrice: React.FC<Props> = ({
                 : irDiscountPrice}
             </ins>
             <del
-              className={`text-rose-800 dark:text-rose-200 md:text-xs ${textDiscountPriceSize}`}
+              className={`text-rose-800 dark:text-rose-200 md:text-xs text-[0.3rem] ${textDiscountPriceSize}`}
             >
               <sup className="mr-1">{locale === "fr" ? "DH" : ""}</sup>
-              {locale === "fr" ? gbpCurrencyFormat(price) : irPrice}
+              {gbpCurrencyFormat(price)}
             </del>
           </div>
           <span
-            className="text-green-800 dark:text-green-200 ml-1 text-[12px] inline-block"
+            className="text-green-800 dark:text-green-200 ml-1 text-[0.4rem] inline-block"
             style={{ direction: "ltr" }}
           >{`(-%${discount})`}</span>
         </div>
@@ -65,8 +64,8 @@ const ProductPrice: React.FC<Props> = ({
             className={`flex items-center ${textMainPriceSize} font-bold no-underline`}
             style={{ flexDirection: "row" }}
           >
-            <sup className="mr-1">{locale === "fr" ? "DH" : "DH"}</sup>
-            <span>{locale === "fr" ? gbpCurrencyFormat(price) : irPrice}</span>
+            <sup className="mr-1">DH</sup>
+            <span>{gbpCurrencyFormat(price)}</span>
             <sub className="ml-1 text-[10px]">{locale === "fr" ? "" : ""}</sub>
           </div>
         </div>

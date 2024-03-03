@@ -145,7 +145,7 @@ const en: { [key: string]: string } = {
   zishopMap: "Zishop Map",
   aboutUs: "About Us",
   contactUs: "Contact Us",
-  saleInZishop: "Sale In Zishop",
+  saleInEshop: "Sale In Zishop",
   careerOpportunities: "Career Opportunities",
   customerServices: "Customer Services",
   commonQuestions: "Common Questions",

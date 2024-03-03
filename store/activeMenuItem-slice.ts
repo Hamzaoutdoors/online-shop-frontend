@@ -4,6 +4,8 @@ import { IActiveMenuItem } from "../lib/types/activeMenuItem";
 const initialState: IActiveMenuItem = {
   activeMenuItemIndex: 0,
   activeMenuItemText: "",
+  nextActiveMenuItemIndex: 0,
+  nextActiveMenuItemText: "",
 };
 
 const activeMenuItemSlice = createSlice({
@@ -15,6 +17,12 @@ const activeMenuItemSlice = createSlice({
     },
     setActiveMenuItemText(state, action: PayloadAction<string>) {
       state.activeMenuItemText = action.payload;
+    },
+    setNextActiveMenuItemIndex(state, action: PayloadAction<number>) {
+      state.nextActiveMenuItemIndex = action.payload;
+    },
+    setNextActiveMenuItemText(state, action: PayloadAction<string>) {
+      state.nextActiveMenuItemText = action.payload;
     },
   },
 });

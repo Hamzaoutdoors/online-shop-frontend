@@ -9,18 +9,18 @@ export const sortByTimeStamp = (
   product1: IProduct,
   product2: IProduct
 ): number => {
-  if (product2?.timeStamp && product1?.timeStamp) {
-    return product2?.timeStamp - product1?.timeStamp;
+  if (product2?.createdAt && product1?.createdAt) {
+    return parseInt(product2?.createdAt) - parseInt(product1?.createdAt);
   }
   return 0;
 };
 
-export const newestProductsFn = (products: IProduct[]) => {
+/* export const newestProductsFn = (products: IProduct[]) => {
   const productsWithTimeStamp = products.map((product) => {
     return {
       ...product,
-      timeStamp: getTimeStamp(product.registerDate!),
+      createdAt: getTimeStamp(product.createdAt!),
     };
   });
   return productsWithTimeStamp.sort(sortByTimeStamp);
-};
+}; */

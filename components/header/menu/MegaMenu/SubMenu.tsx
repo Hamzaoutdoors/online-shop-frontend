@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "../../../../hooks/useLanguage";
-import { IDropDown } from "../../../../lib/types/dropDown";
+import { ICategory } from "../../../../lib/types/subCategories";
 import { useDispatch, useSelector } from "react-redux";
 import { megaMenuActions } from "../../../../store/megaMenu-slice";
 import { IActiveMenuItemRootState } from "../../../../lib/types/activeMenuItem";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 
 interface Props {
-  subMenuItems: IDropDown[] | undefined;
+  subMenuItems: ICategory[] | undefined;
 }
 const SubMenu: React.FC<Props> = ({ subMenuItems }) => {
   const { t, locale } = useLanguage();
@@ -43,18 +43,18 @@ const SubMenu: React.FC<Props> = ({ subMenuItems }) => {
             {subMenuItems.map((menuTitle, index) => {
               return (
                 <div className="py-3" key={`${menuTitle}-${index}`}>
-                  <Link href={`/${activeMenuItemText}/${menuTitle.title}`}>
+                  <Link href={`/${activeMenuItemText}/${menuTitle.category}`}>
                     <div
                       className="block text-sm mr-10 font-bold px-2 border-l-4 border-palette-tertiary rounded-sm hover:text-palette-primary transition-color duration-300"
                       onClick={() => dispatch(megaMenuActions.closeMegaMenu())}
                     >
-                      {t[`${menuTitle.title}`]}
+                      {t[`${menuTitle.category}`]}
                     </div>
                   </Link>
-                  {menuTitle.subtitles.map((subTitle, index) => {
+                  {menuTitle.subCategories?.map((subTitle, index) => {
                     return (
                       <Link
-                        href={`/${activeMenuItemText}/${menuTitle.title}/${subTitle}`}
+                        href={`/${activeMenuItemText}/${menuTitle.category}/${subTitle}`}
                         key={`${subTitle}-${index}`}
                       >
                         <div

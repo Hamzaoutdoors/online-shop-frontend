@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  images: {
+    domains: ["plc-trade.com", "loremflickr.com"],
+  },
   reactStrictMode: true,
   i18n: {
     locales: ["en", "fr"],

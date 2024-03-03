@@ -20,11 +20,6 @@ export const brandContent = [
     imgSrc: "/images/brand-logo-img/benq.webp",
   },
   {
-    id: 5,
-    name: "bvlgari",
-    imgSrc: "/images/brand-logo-img/bvlgari.webp",
-  },
-  {
     id: 6,
     name: "del",
     imgSrc: "/images/brand-logo-img/del.webp",

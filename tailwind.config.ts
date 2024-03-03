@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 function withOpacity(variableName: any) {
   return ({ opacityValue }: any) => {
     if (opacityValue !== undefined) {
@@ -8,7 +11,7 @@ function withOpacity(variableName: any) {
   };
 }
 
-module.exports = {
+module.exports = withMT({
   darkMode: "class",
   mode: "jit",
   content: [
@@ -44,6 +47,7 @@ module.exports = {
           houseCategory: "var(--house-category-bgc)",
           toyCategory: "var(--toy-category-bgc)",
           stationeryCategory: "var(--stationery-category-bgc)",
+          footerBgColor: "var(--footer-bgc)",
         },
       },
       fontFamily: {
@@ -83,4 +87,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});

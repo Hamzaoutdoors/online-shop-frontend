@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import { activeMenuItemActions } from "../../../../store/activeMenuItem-slice";
 import menuItems from "../../../../mock/menuItems";
 import MenuItems from "../../../UI/MenuItems/MenuItems";
-import { IDropDown } from "../../../../lib/types/dropDown";
+import { ICategory } from "../../../../lib/types/subCategories";
 import SubMenu from "./SubMenu";
 const MenusContainer = () => {
-  const [subMenuItems, setSubMenuItems] = useState<IDropDown[]>();
+  const [subMenuItems, setSubMenuItems] = useState<ICategory[]>();
   const dispatch = useDispatch();
   function activeItem(
-    submenuList: IDropDown[] | undefined,
+    submenuList: ICategory[] | undefined,
     activeItemIndex: number,
     activeItemName: string
   ) {
@@ -19,7 +19,7 @@ const MenusContainer = () => {
   }
 
   useEffect(() => {
-    setSubMenuItems(menuItems[0].productsGroup);
+    setSubMenuItems(menuItems[0].subCategories as ICategory[]);
     return () => {
       dispatch(activeMenuItemActions.setActiveMenuItemIndex(0));
       dispatch(activeMenuItemActions.setActiveMenuItemText("digital"));

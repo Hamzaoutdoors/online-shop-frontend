@@ -23,7 +23,7 @@ const Sort: React.FC<Props> = ({
           <BsFilterLeft style={{ fontSize: "1.5rem" }} />
           <BsArrowDown />
         </div>
-        <h5 className="ltr:ml-1 rtl:mr-1">{t.sort}</h5>
+        <h5 className="ml-1">{t.sort}</h5>
       </div>
 
       <div className="flex flex-wrap items-center">

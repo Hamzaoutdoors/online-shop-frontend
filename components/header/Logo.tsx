@@ -11,7 +11,7 @@ const Logo = () => {
           alt="zishop-logo"
           width={80}
           height={20}
-          className="cursor-pointer md:ltr:-ml-3 md:mr-10"
+          className="cursor-pointer md:ml-3 md:mr-10"
           style={{ objectFit: "cover" }}
         />
       </div>

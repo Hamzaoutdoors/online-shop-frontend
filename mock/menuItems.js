@@ -5,7 +5,6 @@ import { RiHeartPulseLine, RiFireLine } from "react-icons/ri";
 import { AiOutlineHome, AiOutlinePercentage } from "react-icons/ai";
 import { BiFootball } from "react-icons/bi";
 
-import { ImMobile } from "react-icons/im";
 import { FiMonitor, FiHeadphones } from "react-icons/fi";
 
 import { GiLargeDress } from "react-icons/gi";
@@ -13,80 +12,671 @@ import { FaBaby, FaRedhat } from "react-icons/fa";
 
 const menuItems = [
   {
-    category: "digital",
-    icon: BsLaptop,
-    productsGroup: [
+    category: "sport",
+    icon: BiFootball,
+    subCategories: [
       {
-        title: "laptop",
-        icon: BsLaptop,
-        subtitles: [
-          "asus",
-          "apple",
-          "dell",
-          "lenovo",
-          "samsung",
-          "hp",
-          "huawei",
-          "acer",
-          "msi",
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "jeans",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
         ],
       },
       {
-        title: "mobile",
-        icon: ImMobile,
-        subtitles: [
-          "samsung",
-          "apple",
-          "nokia",
-          "xiaomi",
-          "motorola",
-          "lg",
-          "sony",
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "shoes",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
         ],
       },
       {
-        title: "computer",
-        icon: FiMonitor,
-        subtitles: ["monitor", "mouse", "keyboard", "hard"],
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "pants",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+        ],
       },
       {
-        title: "other",
-        icon: FiHeadphones,
-        subtitles: ["tablet", "powerBank", "speaker", "headphones"],
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "pants",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+              },
+            ],
+          },
+        ],
       },
     ],
   },
   {
-    category: "fashion",
-    icon: IoShirtOutline,
-    productsGroup: [
+    category: "sport",
+    icon: BiFootball,
+    subCategories: [
       {
-        title: "women",
+        category: "women",
         icon: GiLargeDress,
-        subtitles: [
-          "dress",
-          "skirt",
-          "jeans",
-          "pants",
-          "tShirt",
-          "shoes",
-          "scarf",
+        subCategories: [
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
         ],
       },
       {
-        title: "men",
-        icon: IoShirtSharp,
-        subtitles: ["shirt", "pants", "tie", "tShirt", "shoes", "jeans"],
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+        ],
       },
       {
-        title: "child",
-        icon: FaBaby,
-        subtitles: ["overalls", "mittens", "babyApron", "shoes", "tShirt"],
-      },
-      {
-        title: "other",
-        icon: FaRedhat,
-        subtitles: ["watch", "wallet", "hat", "belt"],
+        category: "women",
+        icon: GiLargeDress,
+        subCategories: [
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+          {
+            category: "dress",
+            icon: BiFootball,
+            subCategories: [
+              {
+                category: "women",
+                icon: GiLargeDress,
+                subCategories: ["dress", "skirt", "jeans", "pants", "tShirt"],
+              },
+              {
+                category: "men",
+                icon: IoShirtSharp,
+                subCategories: [
+                  "shirt",
+                  "pants",
+                  "tie",
+                  "tShirt",
+                  "shoes",
+                  "jeans",
+                ],
+              },
+              {
+                category: "child",
+                icon: FaBaby,
+                subCategories: [
+                  "overalls",
+                  "mittens",
+                  "babyApron",
+                  "shoes",
+                  "tShirt",
+                ],
+              },
+              {
+                category: "other",
+                icon: FaRedhat,
+                subCategories: ["watch", "wallet", "hat", "belt"],
+              },
+            ],
+          },
+        ],
       },
     ],
   },
@@ -100,8 +690,8 @@ const menuItems = [
 export default menuItems;
 
 export const extraMenu = [
-  { title: "about", icon: AiOutlinePercentage, href: "/about" },
-  { title: "brands", icon: RiFireLine, href: "/brands" },
-  { title: "contact", icon: RiFireLine, href: "/contact" },
-  { title: "news", icon: RiFireLine, href: "/news" },
+  { category: "about", icon: AiOutlinePercentage, href: "/about" },
+  { category: "brands", icon: RiFireLine, href: "/brands" },
+  { category: "contact", icon: RiFireLine, href: "/contact" },
+  { category: "news", icon: RiFireLine, href: "/news" },
 ];

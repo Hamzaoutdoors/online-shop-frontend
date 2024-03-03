@@ -19,31 +19,33 @@
     --house-category-bgc: #ccd5ae;
     --toy-category-bgc: #cce3de;
     --stationery-category-bgc: #fbb13c;
+    --footer-bgc: #2e353b;
 
     --color-text-base: 66, 71, 80; /* #424750*/
     --color-text-muted: 107, 114, 128; /*#6b7280*/
     --color-text-side: 255, 231, 231; /*#fff*/
-    --font-family: iranyekan, "IRANSans", "Tahoma";
   }
 
   .dark {
-    --color-bg: 15, 23, 42; /* #0f172a*/
-    --color-bg-side: 30, 41, 59; /* #1e293b*/
-    --digital-category-bgc: #183884;
-    --fashion-category-bgc: #892a19;
-    --beauty-category-bgc: #6d305f;
-    --sport-category-bgc: #650606;
-    --house-category-bgc: #164c4b;
-    --toy-category-bgc: #6d3d4b;
-    --stationery-category-bgc: #6a4202;
+    --bg-primary: 24, 56, 132; /* #183884 */
+    --color-bg: 243, 244, 245; /* #f3f4f5*/
+    --color-bg-side: 252, 251, 255; /* #fcfdff*/
+    --color-bg-black: 0, 0, 0;
+    --digital-category-bgc: #ade8f4;
+    --fashion-category-bgc: #ffddd2;
+    --beauty-category-bgc: #ddd92a;
+    --sport-category-bgc: #ffd60a;
+    --house-category-bgc: #ccd5ae;
+    --toy-category-bgc: #cce3de;
+    --stationery-category-bgc: #fbb13c;
 
-    --color-text-base: 226, 232, 240; /*#e2e8f0*/
-    --color-text-muted: 140, 154, 175; /*#8c9aaf*/
+    --color-text-base: 66, 71, 80; /* #424750*/
+    --color-text-muted: 107, 114, 128; /*#6b7280*/
     --color-text-side: 255, 231, 231; /*#fff*/
   }
 
-  html[dir="ltr"] {
-    --font-family: "Poppins", "Roboto", "sans-serif";
+  html {
+    --font-family: "Roboto", "sans-serif";
   }
 }
 
@@ -54,6 +56,7 @@ body {
   font-family: var(--font-family);
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text-base));
+  overflow-x: hidden;
 }
 
 a {
@@ -63,86 +66,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: bold;
-  src: url("/fonts/woff/iranyekanwebbold.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebbold.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 100;
-  src: url("/fonts/woff/iranyekanwebthin.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebthin.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 300;
-  src: url("/fonts/woff/iranyekanweblight.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanweblight.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/woff/iranyekanwebregular.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-      url("/fonts/ttf/iranyekanwebregular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 500;
-  src: url("/fonts/woff/iranyekanwebmedium.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebmedium.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 800;
-  src: url("/fonts/woff/iranyekanwebextrabold.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-      url("/fonts/ttf/iranyekanwebextrabold.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 850;
-  src: url("/fonts/woff/iranyekanwebblack.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebblack.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: iranyekan;
-  font-style: normal;
-  font-weight: 900;
-  src: url("/fonts/woff/iranyekanwebextrablack.woff") format("woff"),
-    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-      url("/fonts/ttf/iranyekanwebextrablack.ttf") format("truetype");
-  font-display: swap;
 }
 
 .slick-dots li button::before {
@@ -179,20 +102,23 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #a71b4a;
-  border-radius: 100vw;
+  background-color: #183884;
 }
 
 /* input */
 
-input,
 select {
   font-family: inherit;
   color: inherit;
   font-size: inherit;
 }
 
-input:focus,
+input {
+  font-family: inherit;
+  display: block;
+  color: black;
+}
+
 select:focus {
   background-color: transparent;
 }
@@ -214,4 +140,77 @@ select:-webkit-autofill:focus {
 ::placeholder {
   color: #b9b9b9;
   font-size: 14px;
+}
+
+/* About Video */
+.video-container {
+  height: 300px;
+  position: relative;
+  width: 300px;
+}
+
+.video-container video {
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+/* Second Slider */
+.homeSlide {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -1px 4px 8px -1px rgba(148, 148, 148, 1);
+  -webkit-box-shadow: -1px 4px 8px -1px rgba(148, 148, 148, 1);
+  -moz-box-shadow: -1px 4px 8px -1px rgba(148, 148, 148, 1);
+}
+
+.homeSlide .box {
+  margin-top: 80px;
+  padding: 0 40px 60px;
+}
+
+.homeSlide h1 {
+  font-size: 45px;
+  line-height: 55px;
+  margin: 50px 0 20px 0;
+}
+
+.homeSlide p {
+  margin: 20px 0;
+}
+
+.homeSlide ul {
+  position: absolute;
+  bottom: 20px;
+}
+
+.homeSlide ul li {
+  border: 2px solid #b8b7b7;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.homeSlide ul li button {
+  background: transparent !important;
+  color: transparent !important;
+}
+
+.homeSlide ul li button::before {
+  font-size: 15px !important;
+  color: #0f3460;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+}
+
+.homeSlide .box img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
 }

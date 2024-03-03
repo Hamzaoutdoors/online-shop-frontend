@@ -5,9 +5,12 @@ import { Transition } from "react-transition-group";
 import { GoGrabber } from "react-icons/go";
 import { ISideNavBarRootState } from "../../../../lib/types/sidebar";
 import SideNav from "./SideNav";
+import { Button } from "@material-tailwind/react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const SideBar = () => {
   const nodeRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
   const dispatch = useDispatch();
   const isNavbarOpen = useSelector(
     (state: ISideNavBarRootState) => state.sideNavBar.isNavbarOpen
@@ -21,10 +24,19 @@ const SideBar = () => {
   };
 
   return (
-    <div className="md:hidden">
-      <div onClick={openNavBar}>
+    <div>
+      <div onClick={openNavBar} className="md:hidden">
         <GoGrabber style={{ fontSize: "2rem" }} />
       </div>
+      <Button
+        onClick={openNavBar}
+        className="hidden bg-transparent md:flex flex-row items-center border rounded-md border-slate-600 justify-between px-4 py-2 ml-2"
+      >
+        <GoGrabber style={{ fontSize: "1.5rem" }} className="text-white" />
+        <h3 className="font-bold text-base leading-3 ml-2 text-white">
+          {t.CategoryOfGoods}
+        </h3>
+      </Button>
       <Transition
         nodeRef={nodeRef}
         in={isNavbarOpen!}

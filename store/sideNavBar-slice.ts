@@ -1,11 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IDropDown } from "../lib/types/dropDown";
+import { ICategory } from "../lib/types/subCategories";
 import { ISideNavBar } from "../lib/types/sidebar";
 
 const initialState: ISideNavBar = {
   isSidebarOpen: false,
   isNavbarOpen: false,
-  dropDownList: [],
+  isNextSideBarOpen: false,
+  nextSideBarLevel: 0,
+  subCatList: [],
+  nextSubCatList: [],
+  category: "",
 };
 
 const sideNavBarSlice = createSlice({
@@ -16,6 +20,10 @@ const sideNavBarSlice = createSlice({
       state.isSidebarOpen = true;
     },
 
+    openNextSidebar(state) {
+      state.isNextSideBarOpen = true;
+    },
+
     openNavbar(state) {
       state.isNavbarOpen = true;
     },
@@ -24,13 +32,24 @@ const sideNavBarSlice = createSlice({
       state.isSidebarOpen = false;
     },
 
-    closeNavbar(state) {
-      state.isSidebarOpen = false;
-      state.isNavbarOpen = false;
+    closeNextSidebar(state) {
+      state.isNextSideBarOpen = false;
     },
 
-    setSidebarEntries(state, action: PayloadAction<IDropDown[]>) {
-      state.dropDownList = action.payload;
+    closeNavbar(state) {
+      state.isNavbarOpen = false;
+      state.isSidebarOpen = false;
+      state.isNextSideBarOpen = false;
+      state.subCatList = [];
+      state.nextSubCatList = [];
+    },
+
+    setSidebarEntries(state, action: PayloadAction<ICategory[]>) {
+      state.subCatList = action.payload;
+    },
+
+    setNextSidebarEntries(state, action: PayloadAction<ICategory[]>) {
+      state.nextSubCatList = action.payload;
     },
   },
 });

@@ -1,14 +1,13 @@
-import { IProductDetails, TSlug } from "./products";
+import { IProductDetails } from "./products";
 
 export interface ICartProduct {
   image: any;
   name: string;
-  slug: TSlug;
   price: number;
   discount?: number;
   brand: string;
   category: string[];
-  starRating: number;
+  starRating?: number;
   isOffer?: boolean;
   details?: IProductDetails[];
   registerDate?: string;

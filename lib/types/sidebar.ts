@@ -1,9 +1,13 @@
-import { IDropDown } from "./dropDown";
+import { ICategory } from "./subCategories";
 
 export interface ISideNavBar {
   isSidebarOpen: boolean;
   isNavbarOpen: boolean;
-  dropDownList: IDropDown[];
+  isNextSideBarOpen: boolean;
+  subCatList: ICategory[];
+  nextSubCatList: ICategory[];
+  category: string;
+  nextSideBarLevel: number;
 }
 
 export interface ISideNavBarRootState {

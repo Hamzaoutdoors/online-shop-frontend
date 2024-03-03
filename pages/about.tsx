@@ -2,11 +2,21 @@ import type { NextPage } from "next";
 import { useLanguage } from "../hooks/useLanguage";
 import Image from "next/image";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
 const About: NextPage = () => {
-  const { t, locale } = useLanguage();
-  const StartQuot = locale === "en" ? RiDoubleQuotesL : RiDoubleQuotesR;
-  const EndQuot = locale === "en" ? RiDoubleQuotesR : RiDoubleQuotesL;
+  const { t } = useLanguage();
+  const StartQuot = RiDoubleQuotesL;
+  const EndQuot = RiDoubleQuotesR;
+  const { brands } = useSelector((state: RootState) => state.brands);
+  useEffect(() => {
+    if (!brands.length) {
+      console.log("fetching brands");
+    }
+    console.log("brands: ", brands);
+  }, [brands]);
   return (
     <div className="flex w-full xl:max-w-[2100px] mx-auto">
       <div className="w-full lg:w-1/2 mt-8 md:mt-0 px-4 sm:px-8 md:px-0">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HiChevronUp, HiChevronDown } from "react-icons/hi";
 import { Transition } from "react-transition-group";
 
-import { IDropDown } from "../../lib/types/dropDown";
+import { ICategory } from "../../lib/types/subCategories";
 import { useDispatch } from "react-redux";
 import { sideNavBarActions } from "../../store/sideNavBar-slice";
 import { useSelector } from "react-redux";
@@ -11,7 +11,7 @@ import { IActiveMenuItemRootState } from "../../lib/types/activeMenuItem";
 import { useLanguage } from "../../hooks/useLanguage";
 
 interface Props {
-  dropDown: IDropDown;
+  dropDown: ICategory;
   ref: React.HTMLProps<HTMLDivElement>;
 }
 const DropDown = forwardRef<HTMLDivElement, Props>(({ dropDown }, ref) => {
@@ -35,8 +35,8 @@ const DropDown = forwardRef<HTMLDivElement, Props>(({ dropDown }, ref) => {
         className="flex items-center cursor-pointer py-4 px-6"
         onClick={() => setOpenDropDown((prevState) => !prevState)}
       >
-        <h3 className="mr-3 text-md font-bold grow">
-          {t[`${dropDown.title}`]}
+        <h3 className="mr-3 font-bold text-md text-black grow">
+          {t[`${dropDown.category}`]}
         </h3>
         <ArrowDirection style={{ fontSize: "1.5rem" }} />
       </div>
@@ -61,14 +61,19 @@ const DropDown = forwardRef<HTMLDivElement, Props>(({ dropDown }, ref) => {
           }
           `}
             >
-              {dropDown.subtitles.map((item, index) => {
+              {dropDown.subCategories?.map((item, index) => {
                 return (
                   <div className="pl-6 py-3" ref={ref} key={`${item}-${index}`}>
                     <Link
-                      href={`/${activeMenuItemText}/${dropDown.title}/${item}`}
+                      href={`/${activeMenuItemText}/${dropDown.category}/${item}`}
                     >
                       <div>
-                        <div onClick={closeNavbar}>{t[`${item}`]}</div>
+                        <div
+                          onClick={closeNavbar}
+                          className="font-bold text-sm text-black"
+                        >
+                          {t[`${item}`]}
+                        </div>
                       </div>
                     </Link>
                   </div>

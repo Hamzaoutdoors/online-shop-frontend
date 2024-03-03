@@ -13,8 +13,8 @@ const SubmenuCategory = () => {
   const selectedCategory = menuItems.filter(
     (item) => item.category === category
   );
-  const subCategories = selectedCategory[0]?.productsGroup?.map((item) => ({
-    title: item.title,
+  const subtitles = selectedCategory[0]?.subCategories?.map((item) => ({
+    title: item.category,
     icon: item.icon,
   }));
   function onClickHandler(subCategory: string) {
@@ -23,11 +23,11 @@ const SubmenuCategory = () => {
     }
   }
 
-  return subCategories ? (
+  return subtitles ? (
     <div className="flex md:items-center flex-col mb-6">
       <h3 className="text-center md:text-2xl mb-3 md:mb-6">{t.categories}</h3>
       <div className="flex justify-center flex-wrap">
-        {subCategories?.map((subCategory) => (
+        {subtitles?.map((subCategory) => (
           <div
             className="flex flex-col items-center py-2 md:py-4 px-2 sm:px-3 md:px-6 bg-palette-card shadow-lg rounded-lg mx-1 my-1 md:mx-3 w-[5rem] sm:w-auto flex-grow cursor-pointer"
             key={subCategory.title}

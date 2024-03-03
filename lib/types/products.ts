@@ -21,32 +21,58 @@ export interface IProductDetails {
   sound_isolating?: boolean;
 }
 
-export type TSlug = {
+/* export type TSlug = {
   _type: string;
   current: string;
-};
-
-export type TImage = {
-  _key: string;
-  _type: "image";
-  asset: {
-    _ref: string;
-    _type: "reference";
-  };
-};
+}; */
 
 export interface IProduct {
-  image: any;
+  id: string;
+  image?: TImage;
+  images: TImage[];
   name: string;
+  quantity: number;
   description: string;
-  slug?: TSlug;
   price: number;
   discount?: number;
-  details?: IProductDetails[];
-  brand: string;
-  category: string[];
-  isOffer?: boolean;
-  registerDate?: string;
-  timeStamp?: number;
-  starRating: number;
+  category: Category;
+  status: string; // Inactive, Active
+  createdAt?: string;
+}
+
+export interface ProductState {
+  products: IProduct[] | [];
+  currentProduct: IProduct | null;
+  loading: boolean;
+  error: any;
+}
+
+export interface ProductResponse {
+  id: string;
+  name: string;
+  quantity: number;
+  description: string;
+  price: number;
+  discount?: number;
+  status: string;
+  createdAt: string;
+  updated_at: string;
+  category: Category;
+  images: TImage[];
+}
+
+export interface TImage {
+  id: string;
+  path: string;
+  createdAt?: string;
+  updatedAt?: string;
+  __entity: string;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  description?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
